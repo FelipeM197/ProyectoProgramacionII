@@ -8,7 +8,7 @@ package com.mycompany.proyectoprograii;
  *
  * @author usuario
  */
-public class Mavenproject2 {
+public class ProyectoII {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
