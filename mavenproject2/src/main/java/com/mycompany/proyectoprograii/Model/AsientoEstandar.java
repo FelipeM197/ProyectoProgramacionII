@@ -1,18 +1,19 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
-public class AsientoEstandar extends Asiento{
+public class AsientoEstandar extends Asiento {
 
-    //Llamamos al constructor de la clase padre Asiento.
-    public AsientoEstandar(String numero, boolean estado){
-        super(numero, estado);
-
+    public AsientoEstandar(String numero) {
+        super(numero);
     }
 
-
-    //Sobreescribimos el método.
     @Override
-    public double obtenerPrecio(double base){
-        return base;
+    public double obtenerPrecio(double precioBase) {
+        // @TODO: Falta el precio y como determinarlo
+        return precioBase;
     }
-    
+
+    @Override
+    public boolean isVIP() {
+        return false;
+    }
 }

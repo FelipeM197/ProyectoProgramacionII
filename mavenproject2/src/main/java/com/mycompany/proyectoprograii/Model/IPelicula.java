@@ -1,8 +1,8 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
 public interface IPelicula {
     String obtenerTitulo();
     String obtenerGenero();
     int obtenerDuracion();
-    int obtenerRestriccionEdad();
+    RestriccionesEdad obtenerRestriccionEdad();
 }

@@ -1,4 +1,4 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
 public interface ISala{
     String obtenerId();

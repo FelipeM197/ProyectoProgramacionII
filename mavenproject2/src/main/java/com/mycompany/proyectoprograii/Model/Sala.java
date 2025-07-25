@@ -1,24 +1,27 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
-public class Sala implements ISala{
-    private String id;
-    private String nombre;
-    private int capacidad;
+public class Sala implements ISala {
+    private final String id;
+    private final String nombre;
+    private final int capacidad;
 
-    public Sala(String id, String nombre, int capacidad){
+    public Sala(String id, String nombre, int capacidad) {
         this.id = id;
         this.nombre = nombre;
         this.capacidad = capacidad;
     }
 
     @Override
-    public String obtenerId(){
-        return id;
+    public String obtenerId() {
+        return this.id;
     }
-
+    
     @Override
-    public int contarAsientosDisponibles(){
-        return capacidad; //me imagino que returnea capacidad sioq
+    public int contarAsientosDisponibles() {
+        return this.capacidad;
     }
 
+    public String getNombre() {
+        return this.nombre;
+    }
 }

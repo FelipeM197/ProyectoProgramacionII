@@ -54,8 +54,10 @@ abstract class Asiento implements IAsiento {
   + obtenerNumero(): String
   + obtenerEstado(): boolean
   + reservar(): void
+  + isVIP(): Boolean
   + liberar(): void
   + obtenerPrecio(base: double): double
+  
 
 }
 
@@ -66,9 +68,7 @@ class AsientoEstandar extends Asiento {
 class AsientoVIP extends Asiento {
   - espacioExtraPiernas: boolean
   - reclinable: boolean
-  - estrategiaPrecio: IEstrategiaPrecio
-
-  + AsientoVIP(numero: String, espacioExtraPiernas: boolean, reclinable: boolean, estrategiaPrecio: IEstrategiaPrecio)
+  + AsientoVIP(numero: String, espacioExtraPiernas: boolean, reclinable: boolean)
   + obtenerPrecio(base: double): double
 }
 

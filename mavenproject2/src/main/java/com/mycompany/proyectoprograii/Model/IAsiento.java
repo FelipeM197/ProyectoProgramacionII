@@ -1,8 +1,10 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
 public interface IAsiento {
-    public String obtenerNumero();
-    public boolean obtenerEstado();
-    public void reservar();
-    public void liberar();
+    String obtenerNumero();
+    boolean obtenerEstado(); // true para reservado, false para libre
+    void reservar();
+    void liberar();
+    double obtenerPrecio(double precioBase); //@TODO: Marcar un precio base en una variable final
+    boolean isVIP();
 }

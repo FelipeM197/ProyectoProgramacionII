@@ -1,32 +1,49 @@
-package com.mycompany.proyectoprograii;
+package com.mycompany.proyectoprograii.Model;
 
 
-public abstract class Asiento {
+public abstract class Asiento implements IAsiento {
     private String numero;
-    private boolean estado;
-    
-    public Asiento(String numero, boolean estado){
+    private boolean estado; // false = libre, true = reservado
+
+    public Asiento(String numero) {
         this.numero = numero;
-        this.estado = estado;
+        //Se dejará por defecto que el asiento está libre
+        this.estado = false; 
     }
-    
-    public String obtenerNumero(){
-        return numero;
+
+    @Override
+    public String obtenerNumero() {
+        return this.numero;
     }
-    
-    public boolean obtenerEstado(){
-        return estado;
+
+    @Override
+    public boolean obtenerEstado() {
+        return this.estado;
     }
-    
-    public void reservar(){
-        System.out.println("Asiento Reservado.");
+
+    @Override
+    public void reservar() {
+        if (!this.estado) {
+            this.estado = true;
+            System.out.println("Asiento " + this.numero + " reservado correctamente.");
+        } else {
+            System.out.println("Error: El asiento " + this.numero + " ya se encuentra reservado.");
+        }
     }
-    
-    public void liberar(){
-        System.out.println("Asiento Liberado.");
-    }
-    
-    public double obtenerPrecio(double base){
-        return base;
-    }
+
+    @Override
+    public void liberar() {
+        if (this.estado) {
+            this.estado = false;
+            System.out.println("Asiento " + this.numero + " liberado correctamente.");
+        } else {
+            System.out.println("Info: El asiento " + this.numero + " ya se encontraba libre.");
+        }
+    } 
+    //@TODO: debemos marcar un precio base y programarlo
+    @Override
+    public abstract double obtenerPrecio(double precioBase);
+
+    @Override
+    public abstract boolean isVIP();
 }
