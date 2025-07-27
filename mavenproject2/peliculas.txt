@@ -1,0 +1,6 @@
+p001,Matrix,Ciencia Ficción,148,B
+p002,Kimetsu no yaiba,Animación,169,B
+p003,Superman,Superheroes,175,A
+p004,Deadpool,acción,120,C
+p005,Dune: Parte 2,Ciencia Ficción,166,B
+p005,Dune: Parte 2,Ciencia Ficción,166,B

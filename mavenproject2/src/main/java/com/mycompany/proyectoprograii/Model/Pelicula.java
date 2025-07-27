@@ -40,4 +40,11 @@ public class Pelicula implements IPelicula {
     public RestriccionesEdad obtenerRestriccionEdad() { // <-- CAMBIO CLAVE
         return restriccionEdad;
     }
+    public String toCSV() {
+    return this.id + "," +
+           this.titulo + "," +
+           this.genero + "," +
+           this.duracion + "," +
+           this.restriccionEdad.name(); // .name() convierte el enum a String
+    }
 }

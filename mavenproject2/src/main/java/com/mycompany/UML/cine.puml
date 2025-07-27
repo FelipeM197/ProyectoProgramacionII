@@ -57,7 +57,7 @@ abstract class Asiento implements IAsiento {
   + isVIP(): Boolean
   + liberar(): void
   + obtenerPrecio(base: double): double
-  
+
 
 }
 
