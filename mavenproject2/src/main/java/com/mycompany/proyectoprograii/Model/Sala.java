@@ -24,4 +24,8 @@ public class Sala implements ISala {
     public String getNombre() {
         return this.nombre;
     }
+    
+    public int getCapacidad(){//
+        return this.capacidad;
+    }
 }
